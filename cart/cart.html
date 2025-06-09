@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW Cart - Your Selected Cars</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/electric.css" />
+    <link rel="shortcut icon" href="https://www.bmw.in/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg" type="image/x-icon">
+    <style>
+      /* Internal CSS for Parallax Effect */
+      .hero {
+        position: relative !important;
+        height: 100vh !important;
+        overflow: hidden !important;
+      }
+
+      .hero > .parallax-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('../assets/images/cart.jpg'); /* Verify path */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Parallax effect */
+        z-index: -1 !important;
+      }
+
+      .hero > .navbar,
+      .hero > .hero-content {
+        position: relative !important;
+        z-index: 1 !important;
+      }
+
+      /* Mobile fallback */
+      @media (max-width: 768px) {
+        .hero > .parallax-bg {
+          background-attachment: scroll !important;
+          background-size: cover !important;
+        }
+      }
+
+      /* Fallback if image fails */
+      .hero > .parallax-bg::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: 0.5;
+        display: none; /* Enable for debugging if image doesn't load */
+      }
+
+      /* Internal CSS for Payment Section */
+      .cart-summary .payment-form {
+        margin-top: 20px;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .cart-summary .payment-form h3 {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .cart-summary .payment-option {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+
+      .cart-summary .payment-option input[type="radio"] {
+        margin-right: 10px;
+        accent-color: #007bff; /* BMW blue */
+      }
+
+      .cart-summary .payment-option label {
+        font-size: 1rem;
+        color: #333;
+        cursor: pointer;
+      }
+
+      .cart-summary .payment-details {
+        margin-left: 25px;
+        margin-bottom: 15px;
+        display: none; /* Hidden until radio selected */
+      }
+
+      .cart-summary .payment-details.active {
+        display: block; /* Show when radio is selected */
+      }
+
+      .cart-summary .payment-details input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 1rem;
+        color: #333;
+      }
+
+      .cart-summary .payment-details input[type="text"]::placeholder {
+        color: #999;
+      }
+
+      .cart-summary .payment-details input[type="text"]:focus {
+        border-color: #007bff;
+        outline: none;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+      }
+
+      .cart-summary #proceed-payment {
+        display: block;
+        width: 100%;
+        padding: 12px;
+        background: linear-gradient(45deg, #007bff, #00b7ff); /* Match cta-button */
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-top: 20px;
+      }
+
+      .cart-summary #proceed-payment:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+      }
+
+      /* Responsive payment form */
+      @media (max-width: 768px) {
+        .cart-summary .payment-form {
+          padding: 15px;
+        }
+
+        .cart-summary #proceed-payment {
+          font-size: 0.9rem;
+          padding: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <div id="whatsapp-icon">
+      <a href="https://wa.me/1234567890" target="_blank">
+        <img src="../assets/images/whatsapp-icon.png" alt="WhatsApp" height="50px" width="50px" />
+      </a>
+    </div>
+
+    <header class="hero">
+      <div class="parallax-bg"></div>
+      <nav class="navbar">
+        <div class="nav-container">
+          <img
+            src="https://www.bmw.in/content/dam/bmw/common/images/logo-icons/BMW/BMW_White_Logo.svg.asset.1670245093434.svg"
+            alt="BMW Logo"
+            class="logo"
+          />
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a href="../index.html" class="dropbtn">Home</a>
+            </li>
+            <li><a href="../electric/electric.html">Electric</a></li>
+            <li><a href="../index.html#configurator">Configurator</a></li>
+            <li><a href="../shop/shop.html">Online Shop</a></li>
+            <li><a href="https://www.instagram.com/bmw_fandom/?hl=en">More BMW</a></li>
+          </ul>
+          <ul class="nav-icons">
+            <li id="user-menu">
+              <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+              <div class="dropdown-content user-dropdown">
+                <a href="#" id="login-link">Login</a>
+                <a href="../userreg/signup.html" id="register-link">Register</a>
+              </div>
+            </li>
+            <li class="cart-icon">
+              <a href="../cart/cart.html"><i class="fas fa-cart-shopping"></i></a>
+              <span class="cart-count">0</span>
+            </li>
+            <li><i class="fas fa-heart"></i></li>
+            <li><i class="fas fa-location-dot"></i></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <p class="hero-sub">Y O U R</p>
+        <h1 class="hero-title">CART</h1>
+        <p class="hero-sub">REVIEW YOUR SELECTIONS</p><br><br>
+        <a href="#cart" class="cta-button pulse">View Cart</a>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="cart" class="cart-section">
+        <h2 class="section-title">Your Shopping Cart</h2>
+        <div class="cart-container">
+          <div class="cart-items">
+            <div id="cart-items" class="cart-items-list">
+              <!-- Dynamically populated from localStorage -->
+            </div>
+            <div class="cart-actions">
+              <button id="clear-cart" class="cta-button">Clear Cart</button>
+              <a href="../shop/shop.html" class="cta-button">Continue Shopping</a>
+            </div>
+          </div>
+          <div class="cart-summary">
+            <h3>Order Summary</h3>
+            <p>Items: <span id="cart-item-count">0</span></p>
+            <p>Subtotal: <span id="cart-total-amount">USD $0</span></p>
+            <button id="agent-contact-btn" class="cta-button">Contact Agent</button>
+            <div class="payment-form">
+              <h3>Payment Details</h3>
+              <form id="payment-form">
+                <div class="payment-option">
+                  <input type="radio" name="payment-method" id="credit-card" value="credit-card" required>
+                  <label for="credit-card">Credit Card</label>
+                </div>
+                <div class="payment-details" id="credit-card-details">
+                  <input type="text" placeholder="Card Number" required>
+                  <input type="text" placeholder="Expiry Date (MM/YY)" required>
+                  <input type="text" placeholder="CVV" required>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" name="payment-method" id="paypal" value="paypal">
+                  <label for="paypal">PayPal</label>
+                </div>
+                <div class="payment-option">
+                  <input type="radio" name="payment-method" id="bank-transfer" value="bank-transfer">
+                  <label for="bank-transfer">Bank Transfer</label>
+                </div>
+                <div class="payment-details" id="bank-transfer-details">
+                  <input type="text" placeholder="Account Number" required>
+                  <input type="text" placeholder="Routing Number" required>
+                </div>
+                <button type="submit" id="proceed-payment">Proceed to Payment</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <iframe id="login-iframe"
+              src="../userreg/login.html"
+              frameborder="0"
+              scrolling="no"
+              style="
+                  position: fixed;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  width: 500px;
+                  height: 380px;
+                  border: none;
+                  border-radius: 8px;
+                  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                  background-color: white;
+              ">
+        </iframe>
+        <p>Don't have an account? <a href="../userreg/signup.html" target="_blank">Sign Up</a></p>
+      </div>
+    </div>
+
+    <div id="test-drive-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Book a Test Drive</h2>
+        <form id="test-drive-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="model">Preferred Model:</label>
+            <select id="model" required>
+              <option value="" disabled selected>Select a model</option>
+              <option value="iX1 LWB">iX1 LWB</option>
+              <option value="iX xDrive50">iX xDrive50</option>
+              <option value="i4">i4</option>
+              <option value="i5 M60">i5 M60</option>
+              <option value="i7">i7</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="contact-dealer-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Contact a Dealer</h2>
+        <form id="contact-dealer-form">
+          <div class="form-group">
+            <label for="dealer-name">Name:</label>
+            <input type="text" id="dealer-name" required>
+          </div>
+          <div class="form-group">
+            <label for="dealer-email">Email:</label>
+            <input type="email" id="dealer-email" required>
+          </div>
+          <div class="form-group">
+            <label for="dealer-model">Model of Interest:</label>
+            <select id="dealer-model" required>
+              <option value="" disabled selected>Select a model</option>
+              <option value="iX1 LWB">iX1 LWB</option>
+              <option value="iX xDrive50">iX xDrive50</option>
+              <option value="i4">i4</option>
+              <option value="i5 M60">i5 M60</option>
+              <option value="i7">i7</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="agent-contact-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Contact Sales Agent</h2>
+        <form id="agent-contact-form">
+          <div class="form-group">
+            <label for="agent-name">Name:</label>
+            <input type="text" id="agent-name" required>
+          </div>
+          <div class="form-group">
+            <label for="agent-email">Email:</label>
+            <input type="email" id="agent-email" required>
+          </div>
+          <div class="form-group">
+            <label for="agent-message">Message:</label>
+            <textarea id="agent-message" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>CONTACT</h3>
+          <a href="#">Find a Dealer</a>
+          <a href="#">Request a Test Drive</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="#">Build Your BMW</a>
+          <a href="#">BMW Financial Services</a>
+          <a href="#">BMW Safety</a>
+          <a href="#">BMW Premium Selection</a>
+        </div>
+        <div class="footer-column">
+          <h3>Experience BMW</h3>
+          <a href="#">BMW Group</a>
+          <a href="#">BMW Excellence Club</a>
+          <a href="#">BMW Motorrad</a>
+          <a href="#">Charging Network</a>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <a href="#">Legal Disclaimer/Imprint</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-square-x-twitter"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>© BMW AG 2025</p>
+        <div class="footer-legal">
+          <a href="#">Legal Disclaimer/Imprint</a>
+          <a href="#">Privacy Policy</a>
+          <a href="https://www.bmw.in/en/topics/Fascination-BMW/electromobility2020-new/electric-cars.html">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/shop.js"></script>
+  </body>
+</html>

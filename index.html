@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW - Ultimate Driving Experience</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/bmw.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <div id="whatsapp-icon">
+      <a href="https://wa.me/8660666833" target="_blank">
+        <img src="./assets/images/whatsapp-icon.png" alt="WhatsApp" height="50px" width="50px" />
+      </a>
+    </div>
+
+    <header class="hero">
+      <video id="hero-video" autoplay muted loop src="./assets/videos/home.mp4"></video>
+      <nav class="navbar">
+        <div class="nav-container">
+          <img
+           src="./assets/images/logo.svg"
+            alt="BMW Logo"
+            class="logo"
+          />
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a href="#" class="dropbtn">Models</a>
+              <div class="dropdown-content">
+                <a href="#ix1">iX1</a>
+                <a href="#series5">5 Series</a>
+                <a href="#ix">iX</a>
+              </div>
+            </li>
+            <li><a href="./electric/electric.html">Electric</a></li>
+            <li><a href="#configurator">Configurator</a></li>
+            <li><a href="./shop/shop.html">Online Shop</a></li>
+            <li><a href="https://www.instagram.com/bmw_fandom/?hl=en">More BMW</a></li>
+          </ul>
+          <ul class="nav-icons">
+            <li id="user-menu">
+              <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+              <div class="dropdown-content user-dropdown">
+                <a href="#" id="login-link">Login</a>
+                <a href="./userreg/signup.html" id="register-link">Register</a>
+              </div>
+            </li>
+            <li class="cart-icon">
+              <a href="./cart/cart.html"><i class="fas fa-cart-shopping"></i></a>
+              <span class="cart-count">0</span>
+            </li>
+            <li><a href="https://github.com/THousifibrahim"><i class="fas fa-heart"></i></a></li>
+            <li><a href="https://maps.app.goo.gl/ASGPGTeQcCQrpRb1A"><i class="fas fa-location-dot"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <br /><br />
+        <p class="hero-sub">T H E</p>
+        <h1 class="hero-title">iX1</h1>
+        <p class="hero-sub">LONG WHEELBASE</p>
+        <p class="hero-price">Starting at ₹ 49,00,000</p>
+        <button class="cta-button pulse">Discover Now</button>
+      </div>
+    </header>
+
+<!-- Popup window intro -->
+  <div id="profile-popup" class="modal">
+  <div class="profile-popup-content">
+    <span class="close"><i class="fa-solid fa-xmark"></i></span>
+    <div class="popup-left">
+      <img src="./assets/profile.png" alt="Profile Picture" class="profile-img">
+      <h2>Thousif ibrahim</h2>
+      <p>Email: thousifibrahim07@gmail.com</p>
+      <p> Full stack Developer | GenAI | Photography Creating seamless digital experiences for automotive brands.</p>
+    </div>
+    <div class="popup-right">
+      <h3>Connect 🔗</h3>
+      <p>Let's collaborate , and discuss ideas</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/thousif-ibrahim-29050421b" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/THousifibrahim" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="https://www.behance.net/SMDThousif" target="_blank" class="social-icon"><i class="fab fa-behance"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <main id="main-content">
+      <section id="find-bmw" class="section">
+        <h2 class="section-title-find">Find Your BMW</h2>
+        <div class="options-grid">
+          <div class="option-card">
+            <i class="fas fa-car fa-3x"></i>
+            <h3>Find a New Car</h3>
+            <button class="option-btn">Search Now</button>
+          </div>
+          <div class="option-card">
+            <i class="fas fa-magnifying-glass-location fa-3x"></i>
+            <h3>Book a Test Drive</h3>
+            <button class="option-btn" id="test-drive-btn">Request Now</button>
+          </div>
+          <div class="option-card">
+            <i class="fas fa-car-side fa-3x"></i>
+            <h3>Build Your Own</h3>
+            <button class="option-btn">Configure & Price</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="login-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">×</span>
+           <iframe id="login-iframe"
+            src="./userreg/login.html"
+            frameborder="0"
+            scrolling="no"
+            style="
+                /* Position for centering in viewport */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* Crucial for true centering */
+
+                /* Your iframe dimensions and basic styling */
+                width: 500px; /* Fixed width for better centering with transform */
+                height: 380px;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+                background-color: white; /* Give it a background so content doesn't show through */
+            ">
+    </iframe>
+          <p>Don't have an account? <a href="./userreg/signup.html" target="_blank">Sign Up</a></p>
+        </div>
+      </div>
+
+      <div id="test-drive-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">×</span>
+          <h2>Book a Test Drive</h2>
+          <form id="test-drive-form">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" required />
+            </div>
+            <div class="form-group">
+              <label for="model">Preferred Model:</label>
+              <select id="model" required>
+              <option value="" disabled selected>Select a model</option>
+              <option value="iX1 LWB">iX1 LWB</option>
+              <option value="iX xDrive50">iX xDrive50</option>
+              <option value="i4">i4</option>
+              <option value="i5 M60">i5 M60</option>
+              <option value="i7">i7</option>
+            </select>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <div id="contact-dealer-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">×</span>
+          <h2>Contact a Dealer</h2>
+          <form id="contact-dealer-form">
+            <div class="form-group">
+              <label for="dealer-name">Name:</label>
+              <input type="text" id="dealer-name" required />
+            </div>
+            <div class="form-group">
+              <label for="dealer-email">Email:</label>
+              <input type="email" id="dealer-email" required />
+            </div>
+            <div class="form-group">
+              <label for="dealer-model">Model of Interest:</label>
+              <select id="dealer-model" required>
+              <option value="" disabled selected>Select a model</option>
+              <option value="iX1 LWB">iX1 LWB</option>
+              <option value="iX xDrive50">iX xDrive50</option>
+              <option value="i4">i4</option>
+              <option value="i5 M60">i5 M60</option>
+              <option value="i7">i7</option>
+            </select>
+            </div>
+            <button type="submit" class="cta-button">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <section
+        id="series5"
+        class="parallax-section"
+        style="
+          background-image: url('https://bmw.scene7.com/is/image/BMW/DI21_000048047_3000_3000:3to1?fmt=webp&wid=2560&hei=853');
+        "
+      >
+        <div class="section-content">
+          <p class="hero-sub">T H E</p>
+          <h1 class="hero-title">5</h1>
+          <p class="hero-sub">LONG WHEELBASE</p>
+          <p class="hero-price">Starting at ₹ 72,00,000</p>
+          <button class="cta-button">Discover Now</button>
+        </div>
+      </section>
+
+      <section id="configurator" class="section">
+        <h2 id="ix1" class="section-title-ix1">Configure Your BMW</h2>
+        <div class="configurator-container">
+          <div id="car-preview-container">
+            <img
+              id="car-preview"
+              src="./assets/images/white.avif"
+              alt="Car Preview"
+              data-color="white"
+            />
+          </div>
+          <div class="config-sidebar">
+            <div class="config-group color-selector">
+              <h3>Choose Color</h3>
+              <div class="color-buttons">
+                <button
+                  class="color-btn"
+                  style="background-color: black; color: white"
+                  data-color="black"
+                >
+                  B
+                </button>
+                <button
+                  class="color-btn"
+                  style="background-color: blue; color: white"
+                  data-color="blue"
+                >
+                  Bl
+                </button>
+                <button
+                  class="color-btn"
+                  style="background-color: white"
+                  data-color="white"
+                >
+                  W
+                </button>
+              </div>
+            </div>
+            <div class="config-group">
+              <h3>About the iX1</h3>
+              <p>
+                Experience the future of driving with the BMW iX1. This
+                all-electric SUV combines cutting-edge technology with dynamic
+                performance, offering a range of up to 440 km and rapid charging
+                capabilities.
+              </p>
+              <button id="contact-dealer-btn" class="cta-button">
+                Contact Dealer
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="ix"
+        class="parallax-section"
+        style="
+          background-image: url('https://bmw.scene7.com/is/image/BMW/iX_Banner1:3to1?fmt=webp&wid=2560&hei=853');
+        "
+      >
+        <div class="section-content">
+          <h1 class="section-title">The iX: Electric Driving Joy</h1>
+          <p>100% electric. 100% driving pleasure. 100% BMW.</p>
+          <button class="cta-button">Know More</button>
+        </div>
+      </section>
+
+      <section id="offers" class="section">
+        <h2 class="section-title-find">BMW Special Offers</h2>
+        <p>
+          Monthly EMI starting from ₹34,999*/Month. Explore exclusive BMW finance
+          offers across the range.
+        </p>
+        <a href="https://www.linkedin.com/in/thousif-ibrahim-29050421b" class="link"
+          >Know More <i class="fas fa-arrow-right"></i
+        ></a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>CONTACT</h3>
+          <a href="#">Find a Dealer</a>
+          <a href="#">Request a Test Drive</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="#">Build Your BMW</a>
+          <a href="#">BMW Financial Services</a>
+          <a href="#">BMW Safety</a>
+          <a href="#">BMW Premium Selection</a>
+        </div>
+        <div class="footer-column">
+          <h3>Experience BMW</h3>
+          <a href="#">BMW Group</a>
+          <a href="#">BMW Excellence Club</a>
+          <a href="#">BMW Motorrad</a>
+          <a href="#">Charging Network</a>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <a href="#">Legal Disclaimer/Imprint</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.linkedin.com/in/thousif-ibrahim-29050421b" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-square-x-twitter"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>© BMW AG 2025</p>
+        <div class="footer-legal">
+          <a href="#">Legal Disclaimer/Imprint</a>
+          <a href="#">Privacy Policy</a>
+          <a href="https://www.bmw.in/en/topics/Fascination-BMW/electromobility2020-new/electric-cars.html">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/bmw.js"></script>
+  </body>
+</html>

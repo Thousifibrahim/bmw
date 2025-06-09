@@ -1,0 +1,182 @@
+[
+  {
+    "model": "BMW i3 (120 Ah)",
+    "description": "Compact city EV, ~168 hp, 153 mi EPA range",
+    "price": 45000,
+    "currency": "USD",
+    "discounted_price": 43000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://ev-database.org/img/auto/BMW_i3_2019/BMW_i3_2019-01@2x.jpg"
+  },
+  {
+    "model": "BMW i3s",
+    "description": "Sportier i3 variant, 181 hp, 153 mi range",
+    "price": 48000,
+    "currency": "USD",
+    "discounted_price": 46000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/BMW-i3/1540/1554467107207/front-left-side-47.jpg?tr=w-664"
+  },
+  {
+    "model": "BMW i4 eDrive40",
+    "description": "Gran Coupé, RWD, 335 hp, ~307 mi range",
+    "price": 59075,
+    "currency": "USD",
+    "discounted_price": 57500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://imgd.aeplcdn.com/370x208/n/cw/ec/122851/bmw-i4-right-front-three-quarter11.jpeg?isig=0&wm=1&q=80"
+  },
+  {
+    "model": "BMW i4 xDrive40",
+    "description": "Dual‑motor AWD, 396 hp, ~287 mi range",
+    "price": 62300,
+    "currency": "USD",
+    "discounted_price": 60500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/8972/1675664292256/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+    "model": "BMW i4 M50",
+    "description": "Performance model, 536 hp, 0–60 in 3.7 s, ~267 mi",
+    "price": 70700,
+    "currency": "USD",
+    "discounted_price": 68500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/Z4/10183/1685003672330/front-left-side-47.jpg?tr=w-664"
+  },
+  {
+    "model": "BMW i5 eDrive40",
+    "description": "Luxury sedan, RWD, 335 hp, ~295 mi range",
+    "price": 66800,
+    "currency": "USD",
+    "discounted_price": 65000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i4/9693/1696397517497/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+    "model": "BMW i5 M60",
+    "description": "Performance sedan, 593 hp, 0–60 in 3.7 s",
+    "price": 84100,
+    "currency": "USD",
+    "discounted_price": 82000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/X5-2023/10452/1688992642182/front-left-side-47.jpg"
+  },
+  {
+    "model": "BMW i7 xDrive60",
+    "description": "Flagship luxury sedan, AWD, ~300 mi range",
+    "price": 124200,
+    "currency": "USD",
+    "discounted_price": 121500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/8972/1675664292256/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+    "model": "BMW iX xDrive50",
+    "description": "Luxury SUV, dual‑motor AWD, ~516 hp, ~377 mi range",
+    "price": 87250,
+    "currency": "USD",
+    "discounted_price": 85000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/8972/1675664292256/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+   "model": "BMW i3 (120 Ah)",
+    "description": "Compact city EV, ~168 hp, 153 mi EPA range",
+    "price": 45000,
+    "currency": "USD",
+    "discounted_price": 43000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://ev-database.org/img/auto/BMW_i3_2019/BMW_i3_2019-01@2x.jpg"
+  },
+  {
+    "model": "BMW i3s",
+    "description": "Sportier i3 variant, 181 hp, 153 mi range",
+    "price": 48000,
+    "currency": "USD",
+    "discounted_price": 46000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/BMW-i3/1540/1554467107207/front-left-side-47.jpg?tr=w-664"
+  },
+  {
+    "model": "BMW i4 eDrive40",
+    "description": "Gran Coupé, RWD, 335 hp, ~307 mi range",
+    "price": 59075,
+    "currency": "USD",
+    "discounted_price": 57500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://imgd.aeplcdn.com/370x208/n/cw/ec/122851/bmw-i4-right-front-three-quarter11.jpeg?isig=0&wm=1&q=80"
+  },
+  {
+    "model": "BMW i4 xDrive40",
+    "description": "Dual‑motor AWD, 396 hp, ~287 mi range",
+    "price": 62300,
+    "currency": "USD",
+    "discounted_price": 60500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/8972/1675664292256/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+    "model": "BMW i4 M50",
+    "description": "Performance model, 536 hp, 0–60 in 3.7 s, ~267 mi",
+    "price": 70700,
+    "currency": "USD",
+    "discounted_price": 68500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/Z4/10183/1685003672330/front-left-side-47.jpg?tr=w-664"
+  },
+  {
+    "model": "BMW i5 eDrive40",
+    "description": "Luxury sedan, RWD, 335 hp, ~295 mi range",
+    "price": 66800,
+    "currency": "USD",
+    "discounted_price": 65000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i4/9693/1696397517497/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+    "model": "BMW i5 M60",
+    "description": "Performance sedan, 593 hp, 0–60 in 3.7 s",
+    "price": 84100,
+    "currency": "USD",
+    "discounted_price": 82000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/930x620/BMW/X5-2023/10452/1688992642182/front-left-side-47.jpg"
+  },
+  {
+    "model": "BMW i7 xDrive60",
+    "description": "Flagship luxury sedan, AWD, ~300 mi range",
+    "price": 124200,
+    "currency": "USD",
+    "discounted_price": 121500,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/8972/1675664292256/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  },
+  {
+    "model": "BMW iX xDrive50",
+    "description": "Luxury SUV, dual‑motor AWD, ~516 hp, ~377 mi range",
+    "price": 87250,
+    "currency": "USD",
+    "discounted_price": 85000,
+    "discount_available": true,
+    "details_url": "./electric.html",
+    "image_url": "https://stimg.cardekho.com/images/carexteriorimages/630x420/BMW/i7/8972/1675664292256/front-left-side-47.jpg?imwidth=420&impolicy=resize"
+  }
+]

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMW Electric - Discover Electric Driving</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../css/electric.css" />
+    <link rel="shortcut icon" href="../assets/images/favicon.svg" type="image/x-icon">
+
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to Main Content</a>
+    <div id="whatsapp-icon">
+      <a href="https://wa.me/1234567890" target="_blank">
+        <img src="../assets/images/whatsapp-icon.png" alt="WhatsApp" height="50px" width="50px" />
+      </a>
+    </div>
+
+    <header class="hero">
+      <video id="hero-video" autoplay muted loop src="../assets/videos/electric-promo.mp4"></video>
+      <nav class="navbar">
+        <div class="nav-container">
+          <img
+          src="../assets/images/logo.svg"
+            alt="BMW Logo"
+            class="logo"
+          />
+          <ul class="nav-links">
+            <li class="dropdown">
+              <a href="../index.html" class="dropbtn">Home</a>
+            </li>
+            <li><a href="#electric">Electric</a></li>
+            <li><a href="../index.html#configurator">Configurator</a></li>
+            <li><a href="../shop/shop.html">Online Shop</a></li>
+            <li><a href="https://www.instagram.com/bmw_fandom/?hl=en">More BMW</a></li>>
+          </ul>
+          <ul class="nav-icons">
+            <li id="user-menu">
+              <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+              <div class="dropdown-content user-dropdown">
+                <a href="#" id="login-link">Login</a>
+                <a href="../userreg/signup.html" id="register-link">Register</a>
+              </div>
+            </li>
+            <li class="cart-icon">
+              <a href="../cart/cart.html"><i class="fas fa-cart-shopping"></i></a>
+              <span class="cart-count">0</span>
+            </li>
+            <li><a href="https://github.com/THousifibrahim"><i class="fas fa-heart"></i></a></li>
+            <li><a href="https://maps.app.goo.gl/ASGPGTeQcCQrpRb1A"><i class="fas fa-location-dot"></i></a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="hero-content">
+        <p class="hero-sub">B O R N</p>
+        <h1 class="hero-title">ELECTRIC</h1>
+        <p class="hero-sub">100% DRIVING PLEASURE</p><br>
+        <button class="cta-button pulse" id="test-drive-btn">Book a Test Drive</button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="electric" class="section">
+        <h2 class="section-title">Discover BMW Electric Cars</h2>
+        <p>Experience emission-free driving with instant torque, smooth acceleration, and cutting-edge technology. Explore our range of electric vehicles designed for your lifestyle.</p>
+        <div id="car-grid" class="options-grid">
+          <!-- Dynamically populated from electric.json -->
+        </div>
+      </section>
+    </main>
+
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+         <iframe id="login-iframe"
+            src="../userreg/login.html"
+            frameborder="0"
+            scrolling="no"
+            style="
+                /* Position for centering in viewport */
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* Crucial for true centering */
+
+                /* Your iframe dimensions and basic styling */
+                width: 500px; /* Fixed width for better centering with transform */
+                height: 380px;
+                border: none;
+                border-radius: 8px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Slightly stronger shadow */
+                background-color: white; /* Give it a background so content doesn't show through */
+            ">
+    </iframe>
+        <p>Don't have an account? <a href="../userreg/signup.html" target="_blank">Sign Up</a></p>
+      </div>
+    </div>
+
+    <div id="test-drive-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Book a Test Drive</h2>
+        <form id="test-drive-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+          </div>
+          <div class="form-group">
+            <label for="model">Preferred Model:</label>
+            <select id="model" required>
+              <option value="" disabled selected>Select a model</option>
+              <option value="iX1 LWB">iX1 LWB</option>
+              <option value="iX xDrive50">iX xDrive50</option>
+              <option value="i4">i4</option>
+              <option value="i5 M60">i5 M60</option>
+              <option value="i7">i7</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="contact-dealer-modal" class="modal">
+      <div class="modal-content">
+        <span class="close">×</span>
+        <h2>Contact a Dealer</h2>
+        <form id="contact-dealer-form">
+          <div class="form-group">
+            <label for="dealer-name">Name:</label>
+            <input type="text" id="dealer-name" required>
+          </div>
+          <div class="form-group">
+            <label for="dealer-email">Email:</label>
+            <input type="email" id="dealer-email" required>
+          </div>
+          <div class="form-group">
+            <label for="dealer-model">Model of Interest:</label>
+            <select id="dealer-model" required>
+              <option value="" disabled selected>Select a model</option>
+              <option value="iX1 LWB">iX1 LWB</option>
+              <option value="iX xDrive50">iX xDrive50</option>
+              <option value="i4">i4</option>
+              <option value="i5 M60">i5 M60</option>
+              <option value="i7">i7</option>
+            </select>
+          </div>
+          <button type="submit" class="cta-button">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-column">
+          <h3>CONTACT</h3>
+          <a href="#">Find a Dealer</a>
+          <a href="#">Request a Test Drive</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <a href="#">Build Your BMW</a>
+          <a href="#">BMW Financial Services</a>
+          <a href="#">BMW Safety</a>
+          <a href="#">BMW Premium Selection</a>
+        </div>
+        <div class="footer-column">
+          <h3>Experience BMW</h3>
+          <a href="#">BMW Group</a>
+          <a href="#">BMW Excellence Club</a>
+          <a href="#">BMW Motorrad</a>
+          <a href="#">Charging Network</a>
+        </div>
+        <div class="footer-column">
+          <h3>Legal</h3>
+          <a href="#">Legal Disclaimer/Imprint</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-square-x-twitter"></i></a>
+      </div>
+      <div class="footer-bottom">
+        <p>© BMW AG 2025</p>
+        <div class="footer-legal">
+          <a href="#">Legal Disclaimer/Imprint</a>
+          <a href="#">Privacy Policy</a>
+          <a href="https://www.bmw.in/en/topics/Fascination-BMW/electromobility2020-new/electric-cars.html">Contact Us</a>
+        </div>
+      </div>
+    </footer>
+    <script src="../js/electric.js"></script>
+  </body>
+</html>
