@@ -72,7 +72,7 @@ bmw-project/
 
 ### 🧾 Clone the Project
 ```bash
-git clone https://github.com/yourusername/bmw-project.git
+git clone https://github.com/yourusername/bmw-project.git](https://github.com/Thousifibrahim/bmw.git)
 cd bmw-project
 ```
 Run Locally
